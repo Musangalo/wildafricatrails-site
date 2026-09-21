@@ -1301,3 +1301,51 @@ address {
   .container { max-width: 1180px; }
 
 }
+
+/*-----------------------------------*\
+  #ABOUT PHOTO & ACCOMMODATION
+\*-----------------------------------*/
+
+.about-figure {
+  margin-top: 40px;
+  border-radius: var(--radius-15);
+  overflow: hidden;
+}
+
+.about-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.stay {
+  padding-bottom: var(--section-padding);
+}
+
+.stay-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.stay-image {
+  border-radius: var(--radius-15);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.stay-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+
+  .stay-list { grid-template-columns: repeat(3, 1fr); }
+
+  .about-figure,
+  .stay-image { border-radius: var(--radius-25); }
+
+}
