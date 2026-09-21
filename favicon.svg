@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 300" width="260" height="300" role="img" aria-label="Wild Africa Trails">
+  <rect width="260" height="300" fill="#1A2718"/>
+  <g fill="#F6F0E4">
+    <ellipse cx="58" cy="78" rx="17" ry="25" transform="rotate(-28 58 78)"/>
+    <ellipse cx="102" cy="46" rx="18" ry="26" transform="rotate(-10 102 46)"/>
+    <ellipse cx="152" cy="44" rx="18" ry="26" transform="rotate(10 152 44)"/>
+    <ellipse cx="197" cy="72" rx="17" ry="25" transform="rotate(28 197 72)"/>
+  </g>
+  <g transform="translate(30 90) scale(0.95)" fill="#D9A441" stroke="#D9A441" stroke-width="6" stroke-linejoin="round">
+    <path d="M62 20 L80 12 L100 10 L108 22 L125 24 L140 20 L150 24 L156 40 L166 60 L176 78 L186 86 L200 86 L196 100 L182 124 L170 140 L166 160 L164 176 L156 188 L150 200 L138 212 L122 218 L110 214 L104 196 L98 172 L94 150 L96 130 L92 118 L78 114 L62 112 L44 110 L30 100 L18 86 L16 70 L24 52 L36 38 L48 28 Z"/>
+    <ellipse cx="190" cy="176" rx="6" ry="16" transform="rotate(20 190 176)" stroke="none"/>
+  </g>
+</svg>
