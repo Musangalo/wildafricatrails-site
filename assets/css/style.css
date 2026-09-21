@@ -1349,3 +1349,20 @@ address {
   .stay-image { border-radius: var(--radius-25); }
 
 }
+
+
+/*-----------------------------------*\
+  #QUOTE-ON-REQUEST PANEL
+\*-----------------------------------*/
+
+.package-card .price-quote {
+  font-size: var(--fs-3);
+  line-height: 1.2;
+}
+
+.package-card .price-quote span {
+  display: block;
+  margin-top: 6px;
+  line-height: 1.4;
+  opacity: 0.85;
+}
