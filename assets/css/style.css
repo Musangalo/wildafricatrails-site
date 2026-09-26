@@ -283,6 +283,8 @@ body { background: var(--white); }
   padding-block: 15px;
 }
 
+.sticky-logo { display: none; }
+
 .social-list {
   display: flex;
   align-items: center;
@@ -1198,6 +1200,13 @@ address {
     color: var(--onyx);
     border-color: hsla(0, 0%, 0%, 0.15);
   }
+
+  /* swap the WhatsApp icon for the logo in the sticky bar, so the logo is always in view */
+  .header.active .social-list { display: none; }
+
+  .header.active .sticky-logo { display: block; }
+
+  .sticky-logo img { width: 130px; height: auto; }
 
   .overlay { display: none; }
 
