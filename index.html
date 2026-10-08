@@ -868,65 +868,69 @@
             Photos from recent trips with our travellers.
           </p>
 
-          <ul class="gallery-list">
+          <div class="gallery-carousel" data-gallery>
+
+            <button class="gallery-arrow gallery-prev" type="button" aria-label="Previous photos" data-gallery-prev>
+              <ion-icon name="chevron-back-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <ul class="gallery-list" data-gallery-track tabindex="0" aria-label="Trip photos, scroll sideways">
 
             <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-1.jpg"
-                  alt="Travellers holding their gorilla tracking certificates with the ranger team after a trek in Bwindi">
-              </figure>
+              <a href="./assets/images/gallery-1.jpg" target="_blank" rel="noopener" class="gallery-image" aria-label="View full photo: Travellers holding their gorilla tracking certificates with the ranger team after a trek in Bwindi">
+                <img src="./assets/images/gallery-1.jpg" alt="Travellers holding their gorilla tracking certificates with the ranger team after a trek in Bwindi" loading="lazy">
+              </a>
             </li>
 
             <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-2.jpg"
-                  alt="A chimpanzee walking through the forest floor in Kibale, Uganda">
-              </figure>
+              <a href="./assets/images/gallery-2.jpg" target="_blank" rel="noopener" class="gallery-image" aria-label="View full photo: A chimpanzee walking through the forest floor in Kibale, Uganda">
+                <img src="./assets/images/gallery-2.jpg" alt="A chimpanzee walking through the forest floor in Kibale, Uganda" loading="lazy">
+              </a>
             </li>
 
             <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-3.jpg"
-                  alt="Elephants on the bank of the Kazinga Channel, seen from the cruise boat">
-              </figure>
+              <a href="./assets/images/gallery-3.jpg" target="_blank" rel="noopener" class="gallery-image" aria-label="View full photo: Elephants on the bank of the Kazinga Channel, seen from the cruise boat">
+                <img src="./assets/images/gallery-3.jpg" alt="Elephants on the bank of the Kazinga Channel, seen from the cruise boat" loading="lazy">
+              </a>
             </li>
 
             <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-4.jpg"
-                  alt="Sipi Falls in spray on the slopes of Mount Elgon, eastern Uganda">
-              </figure>
+              <a href="./assets/images/gallery-4.jpg" target="_blank" rel="noopener" class="gallery-image" aria-label="View full photo: Sipi Falls in spray on the slopes of Mount Elgon, eastern Uganda">
+                <img src="./assets/images/gallery-4.jpg" alt="Sipi Falls in spray on the slopes of Mount Elgon, eastern Uganda" loading="lazy">
+              </a>
             </li>
 
             <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-5.jpg"
-                  alt="Travellers and their guide at the Uganda Equator monument">
-              </figure>
+              <a href="./assets/images/gallery-5.jpg" target="_blank" rel="noopener" class="gallery-image" aria-label="View full photo: Travellers and their guide at the Uganda Equator monument">
+                <img src="./assets/images/gallery-5.jpg" alt="Travellers and their guide at the Uganda Equator monument" loading="lazy">
+              </a>
             </li>
 
             <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-6.jpg"
-                  alt="Two travellers in life jackets floating on tubes down the Nile at Jinja">
-              </figure>
+              <a href="./assets/images/gallery-6.jpg" target="_blank" rel="noopener" class="gallery-image" aria-label="View full photo: Two travellers in life jackets floating on tubes down the Nile at Jinja">
+                <img src="./assets/images/gallery-6.jpg" alt="Two travellers in life jackets floating on tubes down the Nile at Jinja" loading="lazy">
+              </a>
             </li>
 
             <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-7.jpg"
-                  alt="Travellers with their guide walking through a smallholding of coffee and vanilla">
-              </figure>
+              <a href="./assets/images/gallery-7.jpg" target="_blank" rel="noopener" class="gallery-image" aria-label="View full photo: Travellers with their guide walking through a smallholding of coffee and vanilla">
+                <img src="./assets/images/gallery-7.jpg" alt="Travellers with their guide walking through a smallholding of coffee and vanilla" loading="lazy">
+              </a>
             </li>
 
             <li class="gallery-item">
-              <figure class="gallery-image">
-                <img src="./assets/images/gallery-8.jpg"
-                  alt="Sunset over the treeline from the road, Uganda">
-              </figure>
+              <a href="./assets/images/gallery-8.jpg" target="_blank" rel="noopener" class="gallery-image" aria-label="View full photo: Sunset over the treeline from the road, Uganda">
+                <img src="./assets/images/gallery-8.jpg" alt="Sunset over the treeline from the road, Uganda" loading="lazy">
+              </a>
             </li>
 
-          </ul>
+            </ul>
+
+            <button class="gallery-arrow gallery-next" type="button" aria-label="Next photos" data-gallery-next>
+              <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+          </div>
 
         </div>
       </section>

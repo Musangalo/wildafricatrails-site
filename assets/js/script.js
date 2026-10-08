@@ -78,3 +78,40 @@ if (enquiryForm) {
     );
   });
 }
+
+
+/**
+ * gallery carousel
+ *
+ * Scrolls one photo at a time; arrows disable at either end.
+ */
+
+const galleryTrack = document.querySelector("[data-gallery-track]");
+const galleryPrev = document.querySelector("[data-gallery-prev]");
+const galleryNext = document.querySelector("[data-gallery-next]");
+
+if (galleryTrack && galleryPrev && galleryNext) {
+  const slideStep = function () {
+    const item = galleryTrack.querySelector(".gallery-item");
+    const gap = parseFloat(getComputedStyle(galleryTrack).columnGap) || 0;
+    return item.getBoundingClientRect().width + gap;
+  };
+
+  const updateArrows = function () {
+    const max = galleryTrack.scrollWidth - galleryTrack.clientWidth;
+    galleryPrev.disabled = galleryTrack.scrollLeft <= 4;
+    galleryNext.disabled = galleryTrack.scrollLeft >= max - 4;
+  };
+
+  galleryPrev.addEventListener("click", function () {
+    galleryTrack.scrollBy({ left: -slideStep() });
+  });
+
+  galleryNext.addEventListener("click", function () {
+    galleryTrack.scrollBy({ left: slideStep() });
+  });
+
+  galleryTrack.addEventListener("scroll", updateArrows, { passive: true });
+  window.addEventListener("resize", updateArrows);
+  updateArrows();
+}
