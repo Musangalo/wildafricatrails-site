@@ -114,4 +114,43 @@ if (galleryTrack && galleryPrev && galleryNext) {
   galleryTrack.addEventListener("scroll", updateArrows, { passive: true });
   window.addEventListener("resize", updateArrows);
   updateArrows();
+
+  // autoplay: roll on a timer, wrap back to the start at the end,
+  // pause while the visitor hovers, touches, focuses or the tab is hidden
+  const AUTOPLAY_MS = 4000;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let autoplayPaused = false;
+  let galleryVisible = false;
+
+  const autoplayTick = function () {
+    if (autoplayPaused || !galleryVisible || document.hidden) return;
+    const max = galleryTrack.scrollWidth - galleryTrack.clientWidth;
+    if (galleryTrack.scrollLeft >= max - 4) {
+      galleryTrack.scrollTo({ left: 0 });
+    } else {
+      galleryTrack.scrollBy({ left: slideStep() });
+    }
+  };
+
+  const pauseAutoplay = function () { autoplayPaused = true; };
+  const resumeAutoplay = function () { autoplayPaused = false; };
+
+  if (!reduceMotion) {
+    const galleryBox = galleryTrack.closest("[data-gallery]");
+
+    galleryBox.addEventListener("mouseenter", pauseAutoplay);
+    galleryBox.addEventListener("mouseleave", resumeAutoplay);
+    galleryBox.addEventListener("focusin", pauseAutoplay);
+    galleryBox.addEventListener("focusout", resumeAutoplay);
+    galleryBox.addEventListener("touchstart", pauseAutoplay, { passive: true });
+    galleryBox.addEventListener("touchend", function () {
+      setTimeout(resumeAutoplay, AUTOPLAY_MS);
+    }, { passive: true });
+
+    new IntersectionObserver(function (entries) {
+      galleryVisible = entries[0].isIntersecting;
+    }).observe(galleryBox);
+
+    setInterval(autoplayTick, AUTOPLAY_MS);
+  }
 }
